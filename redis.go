@@ -54,10 +54,11 @@ const (
 	msgRankIsZero           = "ERR RANK can't be zero: use 1 to start from the first match, 2 from the second ... or use negative to start from the end of the list"
 	msgCountIsNegative      = "ERR COUNT can't be negative"
 	msgMaxLengthIsNegative  = "ERR MAXLEN can't be negative"
+	msgRootToCreateObject   = "ERR new objects must be created at the root"
 )
 
 func errWrongNumber(cmd string) string {
-	return fmt.Sprintf("ERR wrong number of arguments for '%s' command", strings.ToLower(cmd))
+	return fmt.Sprintf("ERR wrong number of arguments for '%s' command", cmd)
 }
 
 func errLuaParseError(err error) string {
